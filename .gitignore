@@ -1,6 +1,6 @@
 node_modules
 
-output.css
+# output.css
 
 package-lock.json    
 package.json
