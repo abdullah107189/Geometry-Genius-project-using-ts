@@ -11,16 +11,18 @@
 <body class="">
     <header class=" bg-sky-100 p-5 sticky top-0 z-10">
         <div class="max-w-[1440px] mx-auto flex  items-center justify-between">
-            
             <div>
                 <h1 class="font-bold text-4xl">Interactive</h1>
                 <p class="font-semibold text-2xl ">Geometry Genius</p>
             </div>
             <div>
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Blog</button>
+                <button id="result"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Blog</button>
             </div>
         </div>
     </header>
+
+
     <main class="md:grid grid-cols-4 gap-2 max-w-[1440px] mx-auto lg:p-5 md:p-3">
         <div class="questions-section col-span-3 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 gap-2 mt-3">
 
@@ -34,22 +36,27 @@
                             d="m0 0h3l11 21 11 17 36 57 13 21 12 19 11 18 15 23 12 20 12 19 13 21 24 38 10 16 13 21 12 19 15 24 12 19 15 24 13 21 12 19 30 48 12 19 30 48 24 38 16 26 24 38 13 21 14 22 16 26 24 38 13 21 12 19 30 48 12 19 30 48 12 19 30 48 12 19 30 48 12 19 15 24 13 21 12 19 15 24 12 19 15 24 13 21 12 19 15 24 12 19 16 26 14 22 12 19 14 23 11 17 15 24 13 21 15 24 14 22 13 21 12 19 13 21 12 19 15 24 12 19 10 16 9 10v5h-2047l1-5 9-14 10-16 8-13 12-19 11-17 13-21 11-18 10-16 11-17 10-16 13-21 10-16 12-19 25-40 7-11 13-21 15-24 13-21 14-22 15-24 13-21 7-11 12-19 15-24 16-26 11-17 11-18 10-16 14-22 13-21 11-17 9-15 7-11 15-24 9-14 14-23 11-17 16-26 9-14 11-18 11-17 13-21 12-19 11-18 12-19 11-17 9-15 10-16 9-14 10-16 8-13 11-18 10-15 14-23 11-17 8-14 10-15 13-21 12-19 13-21 24-38 16-26 11-17 15-24 16-26 14-22 13-21 11-17 14-23 11-17 11-18 10-16 12-19 10-16 12-19 7-11 11-18 11-17 11-18 10-15 9-16 12-18 11-18 9-14 13-21 12-19z"
                             fill="#FEFE63" />
                     </svg>
-
                 </div>
+
                 <h1 class="text-2xl font-bold text-center md:pt-8 pt-4">Triangle</h1>
                 <p class="text-center md:my-5 my-3">Area (A) = 0.5 * b * h</p>
+
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="text" name="" id="traiangeB">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="number" name=""
+                            id="traiangleB">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="h" type="text" name="" id="triangleH">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="h" type="number" name=""
+                            id="triangleH">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
+                <button id="traiangleBtn" type="submit"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500 w-full">Calculate
+                </button>
             </div>
 
             <!-- rectangle  -->
@@ -60,24 +67,25 @@
                         xmlns="http://www.w3.org/2000/svg">
                         <path transform="translate(0)" d="m0 0h2048v1294h-2048z" fill="#C6C9FF" />
                     </svg>
-
                 </div>
+
                 <h1 class="text-2xl font-bold text-center md:pt-8 pt-4">Rectangle</h1>
                 <p class="text-center md:my-5 my-3">Area (A) = w * i</p>
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="w" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="w" type="number" name=""
                             id="rectangleW">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="i" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="i" type="number" name=""
                             id="rectangleI">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500 ">Calculate</button>
+                <button id="rectangleBtn" type="submit"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500 ">Calculate</button>
             </div>
 
             <!-- Parallelogram -->
@@ -97,18 +105,19 @@
                 <p class="text-center md:my-5 my-3">Area (A) = b * h</p>
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="number" name=""
                             id="parallelogramB">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="h" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="h" type="number" name=""
                             id="parallelogramH">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
+                <button id="ParallelogramBtn"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
             </div>
 
             <!-- Rhombus -->
@@ -128,19 +137,21 @@
                 <p class="text-center md:my-5 my-3">Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="d₁" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="d₁" type="number" name=""
                             id="rhombusd1">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="d₂" type="text" name=""
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="d₂" type="number" name=""
                             id="rhombusd2">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
+                <button id="RhombusBtn"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
             </div>
+
             <!-- Pentagon -->
             <div class="border flex flex-col p-3 shadow-lg rounded-lg">
                 <div class="md:w-[243px] md:h-[200px] w-[150px]  h-[150px] mx-auto flex items-center justify-center">
@@ -244,16 +255,19 @@
                 <p class="text-center md:my-5 my-3">Area (A) = 0.5 * p * b</p>
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="p" type="text" name="" id="pentagonP">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="p" type="number" name=""
+                            id="pentagonP">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="text" name="" id="pentagonB">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="number" name=""
+                            id="pentagonB">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
+                <button id="PentagonBtn"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
             </div>
 
             <!-- Ellipse -->
@@ -273,16 +287,19 @@
                 <p class="text-center md:my-5 my-3">Area (A) = &#960ab </p>
                 <div class="grid grid-cols-2 gap-3 md:mb-10 mb-5">
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="a" type="text" name="" id="ellipseA">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="a" type="number" name=""
+                            id="ellipseA">
                         cm
                     </div>
                     <div class="flex gap-2">
-                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="text" name="" id="ellipseB">
+                        <input class="w-full bg-slate-100 px-4 py-2" placeholder="b" type="number" name=""
+                            id="ellipseB">
                         cm
                     </div>
                 </div>
 
-                <button class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
+                <button id="EllipseBtn"
+                    class="text-xl text-white font-semibold px-5 py-2 rounded-xl bg-sky-500">Calculate</button>
             </div>
         </div>
 
@@ -330,7 +347,7 @@
 
         </div>
     </main>
-    <script src="app.js"></script>
+    <script src="./public/app.js"></script>
 </body>
 
 </html>
