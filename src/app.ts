@@ -12,8 +12,8 @@ traiangleBtn.addEventListener('click', (e) => {
     if (!isNaN(base) && base > 0 && !isNaN(height) && height > 0) {
       const triangleArea = 0.5 * base * height;
       output('Triangle', triangleArea)
-      // baseInput.value = ""
-      // heightInput.value = ""
+      baseInput.value = ""
+      heightInput.value = ""
     } else {
       alert("Error: Please enter valid numbers for base and height.");
     }
