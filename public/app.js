@@ -11,8 +11,8 @@ traiangleBtn.addEventListener('click', (e) => {
         if (!isNaN(base) && base > 0 && !isNaN(height) && height > 0) {
             const triangleArea = 0.5 * base * height;
             output('Triangle', triangleArea);
-            // baseInput.value = ""
-            // heightInput.value = ""
+            baseInput.value = "";
+            heightInput.value = "";
         }
         else {
             alert("Error: Please enter valid numbers for base and height.");
@@ -121,3 +121,19 @@ const output = (name, result) => {
   `;
     (_a = document.getElementById('tbody')) === null || _a === void 0 ? void 0 : _a.appendChild(resultRow);
 };
+// random color generate 
+const generateColor = () => {
+    const r = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+    const g = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+    const b = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+    return (`rgb(${r},${g},${b})`);
+};
+const cards = document.querySelectorAll('.geometry-card');
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.backgroundColor = generateColor();
+    });
+    card.addEventListener('mouseout', () => {
+        card.style.backgroundColor = '';
+    });
+});

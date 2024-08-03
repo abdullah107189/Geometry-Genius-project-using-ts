@@ -125,3 +125,23 @@ const output = (name: string, result: number) => {
   `;
   document.getElementById('tbody')?.appendChild(resultRow)
 }
+
+// random color generate 
+const generateColor = () => {
+  const r = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+  const g = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+  const b = Math.floor(Math.random() * 256); // Generate a random number between 0 and 255
+
+  return (`rgb(${r},${g},${b})`)
+}
+
+const cards = document.querySelectorAll<HTMLElement>('.geometry-card')
+cards.forEach(card => {
+  card.addEventListener('mouseover', () => {
+    card.style.backgroundColor = generateColor();
+  });
+
+  card.addEventListener('mouseout', () => {
+    card.style.backgroundColor = '';
+  });
+});
